@@ -2,16 +2,37 @@
     <html>
     <head>
         <title>Scavenger Hunt</title>
+        <style>
+			body{
+				background-color: pink;
+			}
+        	p#clue{
+        		color: pink;
+        	}
+        </style>
     </head>
+
     <body>
-        <h1>What's <br>in <br>the <br>box?</h1>
-        <form>
+        <h1>This is a required skill when utilizing information recieved from coorporate espionage</h1>
+		<p id="clue">Hint: what do Pigs, Julius Caesar, and Latin all have in common?</p><br>
+		<p>Decrypt this text: mdmzamzig mvoqvmmzqvogig </p>
+        <form id="anwser" name="Submit" onsubmit="MyFunction()">
             <p>A better name for this form coming soon:</p>
-            <input type="text" name="Gucci Gang" value="Gucci Gang">
-            <div id="output">
-                <p>output goes here</p>
-            </div>
+            <input type="text" name="Gucci Gang" value="Ides of march"></input>
+			<button type="button" name="Submit" onclick="document.getElementById('anwser').submit()">Submit</button>
+            <p>It's okay to use a hint, you aren't a bad person for using it...</p>
         </form>
+		<button type="button" onclick="document.getElementById('clue').style.color = 'black'"> Hint </button>
+		<script>
+		function MyFunction() {
+    		var x = document.forms["Submit"]["Gucci Gang"].value;
+    		if (x == "Reverse Engineering" || x == "reverse engineering") {
+        		alert("A WINNER IS YOU");
+    		} else {
+				alert("git gud scrub lol");
+			}
+		}
+		</script>
 
     </body>
     </html>
