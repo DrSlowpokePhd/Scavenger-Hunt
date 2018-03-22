@@ -3,18 +3,31 @@
     <head>
         <title>Scavenger Hunt</title>
         <style>
+			@import url('https://fonts.googleapis.com/css?family=Cabin');
 			body{
-				background-color: pink;
+				background-color: #f970b6;
 			}
         	p#clue{
-        		color: pink;
+        		color: #f970b6;
         	}
+			h1#question{
+				text-align: center;
+				font-size: 300%;
+				font-family: Cabin, sans-serif, serif;
+				font-weight: lighter;
+				/*padding-left: px;*/
+			}
+			strong#boldNbrash{
+				/*More like belongs in the trash*/
+				color: #302f2f;
+				text-decoration: underline;
+			}
         </style>
     </head>
 
     <body>
-        <h1>This is a required skill when utilizing information recieved from coorporate espionage</h1>
-		<p id="clue">Hint: what do Pigs, Julius Caesar, and Latin all have in common?</p><br>
+        <h1 id="question">This is a <strong id='boldNbrash' id='boldNbrash'>re</strong id='boldNbrash'>quired skill when<br>utilizing information recie<strong id='boldNbrash'>ve</strong id='boldNbrash'>d<br> from coo<strong id='boldNbrash'>r</strong id='boldNbrash'>porate <strong id='boldNbrash'>es</strong id='boldNbrash'>pionag<strong id='boldNbrash'>e</strong id='boldNbrash'></h1>
+		<p id="clue">Hint: what do Pigs, Julius Caesar, and Latin all have in common?</p>
 		<p>Decrypt this text: mdmzamzig mvoqvmmzqvogig </p>
         <form id="anwser" name="Submit" onsubmit="MyFunction()">
             <p>A better name for this form coming soon:</p>
@@ -22,7 +35,7 @@
 			<button type="button" name="Submit" onclick="document.getElementById('anwser').submit()">Submit</button>
             <p>It's okay to use a hint, you aren't a bad person for using it...</p>
         </form>
-		<button type="button" onclick="document.getElementById('clue').style.color = 'black'"> Hint </button>
+		<button type="button" onclick="RevealHint()"> Hint </button>
 		<script>
 		function MyFunction() {
     		var x = document.forms["Submit"]["Gucci Gang"].value;
@@ -30,6 +43,13 @@
         		alert("A WINNER IS YOU");
     		} else {
 				alert("git gud scrub lol");
+			}
+		}
+		function RevealHint() {
+			if (document.getElementById('clue').style.color == 'pink') {
+				document.getElementById('clue').style.color = 'black';
+			} else {
+				document.getElementById('clue').style.color = 'pink';
 			}
 		}
 		</script>
