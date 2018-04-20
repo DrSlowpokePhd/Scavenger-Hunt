@@ -5,10 +5,10 @@
         <style>
 			@import url('https://fonts.googleapis.com/css?family=Cabin');
 			body{
-				background-color: #f970b6;
+				background-color: pink;
 			}
         	p#clue{
-        		color: #f970b6;
+        		color: black;
         	}
 			h1#question{
 				text-align: center;
@@ -19,40 +19,27 @@
 			}
 			strong#boldNbrash{
 				/*More like belongs in the trash*/
-				color: #302f2f;
+				color: black;
 				text-decoration: underline;
 			}
         </style>
+        <script type="text/javascript" src="My.js">
+            
+        </script>
     </head>
 
     <body>
         <h1 id="question">This is a <strong id='boldNbrash' id='boldNbrash'>re</strong id='boldNbrash'>quired skill when<br>utilizing information recie<strong id='boldNbrash'>ve</strong id='boldNbrash'>d<br> from coo<strong id='boldNbrash'>r</strong id='boldNbrash'>porate <strong id='boldNbrash'>es</strong id='boldNbrash'>pionag<strong id='boldNbrash'>e</strong id='boldNbrash'></h1>
-		<p id="clue">Hint: what do Pigs, Julius Caesar, and Latin all have in common?</p>
+		<p id="clue">Hint: Caesar had an unbreakable code, hidden in plain sight. When the pigs found his cypher, added to it they did. Written in latin (not the one you know). The pigs translated this phrase to gibberish once more. </p>
 		<p>Decrypt this text: mdmzamzig mvoqvmmzqvogig </p>
         <form id="anwser" name="Submit" onsubmit="MyFunction()">
-            <p>A better name for this form coming soon:</p>
+            <input type="text" name="Group" value="enter group letter here">
             <input type="text" name="Gucci Gang" value="Ides of march"></input>
-			<button type="button" name="Submit" onclick="document.getElementById('anwser').submit()">Submit</button>
-            <p>It's okay to use a hint, you aren't a bad person for using it...</p>
+			<button type="button" name="Submit" onclick="submitForms()">Submit</button>
+
         </form>
-		<button type="button" onclick="RevealHint()"> Hint </button>
-		<script>
-		function MyFunction() {
-    		var x = document.forms["Submit"]["Gucci Gang"].value;
-    		if (x == "Reverse Engineering" || x == "reverse engineering") {
-        		alert("A&J restaurant is located between the PE100 and PE200 buildings");
-    		} else {
-				alert("Sorry, please try again");
-			}
-		}
-		function RevealHint() {
-			if (document.getElementById('clue').style.color == 'pink') {
-				document.getElementById('clue').style.color = 'black';
-			} else {
-				document.getElementById('clue').style.color = 'pink';
-			}
-		}
-		</script>
+
+
 
     </body>
     </html>
